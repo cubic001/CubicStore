@@ -35,5 +35,5 @@ jobs:
       # List all files
       - name: List all files
         run: |
-          ls $${github.workspace}}
+          ls ${{github.workspace}}
       - run: echo "Job status is ${{job.status}}"
