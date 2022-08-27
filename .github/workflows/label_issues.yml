@@ -2,15 +2,15 @@ name: Label issues
 on:
   issues:
     types:
-	  - reopened
-	  - opened
+      - reopened
+      - opened
 jobs:
   label_issues:
     permissions:
-	  issues: write
+      issues: write
     steps:
-	  - name: Label issues
-	    uses: andymckay/labeler@1.0.4
-		with:
-		  add-labels: "triage"
-		  repo-token: ${{secrets.GITHUB_TOKEN}}
+    - name: Label issues
+      uses: andymckay/labeler@1.0.4
+        with:
+          add-labels: "triage"
+          repo-token: ${{secrets.GITHUB_TOKEN}}
